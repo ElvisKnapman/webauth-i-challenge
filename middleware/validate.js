@@ -1,6 +1,6 @@
 const db = require("../data/db-config.js");
 const Users = require("../helpers/helpers.js");
-const validateNewUser = (req, res, next) => {
+const validateBody = (req, res, next) => {
   const { body } = req;
 
   if (body.username && body.password) {
@@ -8,7 +8,7 @@ const validateNewUser = (req, res, next) => {
   } else {
     res
       .status(400)
-      .json({ message: "New user must have a valid username and password" });
+      .json({ message: "user must have a valid username and password" });
   }
 };
 
@@ -30,6 +30,6 @@ const checkIfUsernameTaken = async (req, res, next) => {
 };
 
 module.exports = {
-  validateNewUser,
+  validateBody,
   checkIfUsernameTaken
 };
