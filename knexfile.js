@@ -6,13 +6,12 @@ module.exports = {
     connection: {
       filename: "./data/myDB.db3"
     },
-    useNullAsDefault: true
-  },
-
-  migrations: {
-    directory: "./data/migrations"
-  },
-  seeds: {
-    directory: "./data/seeds"
+    useNullAsDefault: true,
+    migrations: {
+      directory: "./data/migrations"
+    },
+    seeds: {
+      directory: "./data/seeds"
+    }
   }
 };
