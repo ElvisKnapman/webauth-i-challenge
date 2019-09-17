@@ -29,7 +29,7 @@ server.post(
     try {
       const result = await Users.createUser(body);
       if (result) {
-        res.status(200).json(result);
+        res.status(201).json(result);
       } else {
         res.status(400).json({ message: "User could not be created" });
       }
